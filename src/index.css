@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background: #251b1b;
+}
+/* Top Section */
+.top {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 20px 0;
+    position: "sticky";
+        top: 100;
+        zIndex: index + 1;
+    
+}
+
+/* Main Section */
+.main {
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    color: #fff;
+}
+
+h1 {
+    font-size: clamp(32px, 6vw, 70px);
+}
+
+h2 {
+    font-size: clamp(24px, 5vw, 55px);
+}
+
+/* Main Box */
+.main-box {
+    width: 80%;
+    max-width: 1100px;
+    height: auto;
+    border-radius: 180px;
+    background: #3b2b2b;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin: 20px auto;
+    border: #f2f2f2 solid 2px;
+     
+}
+
+/* Left Image */
+.left {
+    flex: 1 1 300px;
+    height: 300px;
+}
+
+.left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Right Text */
+.right {
+    flex: 1 1 300px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #fff;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 20px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: clamp(20px, 8vw, 100px);
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: clamp(14px, 2vw, 18px);
+}
+
+.nav-links a:hover {
+    color: #000000;
+    background: #251b1b;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+/* Button */
+button {
+    width: 70%;
+    max-width: 250px;
+    padding: 12px;
+    margin: 20px auto 0;
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+    background: #333;
+    border-radius: 30px;
+    border: #fff solid 3px;
+}
+
+/* ---------------------------
+   Mobile Responsive Media Query
+--------------------------- */
+@media (max-width: 768px) {
+
+    .main-box {
+        flex-direction: column;
+    }
+
+    .left,
+    .right {
+        height: auto;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .right {
+        padding: 20px;
+    }
+
+    button {
+        width: 90%;
+    }
+}
